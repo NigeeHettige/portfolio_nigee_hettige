@@ -6,6 +6,8 @@ import Hero from "./components/Hero/hero";
 import About from "./components/About/about";
 import Skills from "./components/Skills/skills";
 import Contact from "./components/Contact/contact";
+import Projects from "./components/Projects/project";
+import Footer from "./components/Footer/footer";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -31,12 +33,14 @@ export default function Home() {
     <>
       <div className="min-h-screen bg-background">
         <NavBar activeSession={activeSection} />
-       <main className="w-full">
-       <Hero />
-       <About/>
-       <Skills/>
-       <Contact/>
-       </main>
+        <main className="w-full">
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer/>
       </div>
     </>
   );

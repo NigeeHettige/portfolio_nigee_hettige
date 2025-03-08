@@ -14,7 +14,7 @@ export default function Card({ icon: Icon, title, description }: CardProps) {
           </div>
           <h3 className="text-xl text-github font-semibold">{title}</h3>
         </div>
-        <p className="leading-relaxed text-about_desc text-justify ">{description}</p>
+        <p className="leading-relaxed text-about_desc  ">{description}</p>
       </div>
     </>
   );

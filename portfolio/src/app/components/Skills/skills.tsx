@@ -16,14 +16,18 @@ export default function Skills() {
     {
       title: "Backend Development",
       icon: <Server size={24} />,
-      skills: ["Node.js", "RESTful APIs"],
+      skills: ["Node.js", "RESTful APIs","Flask API"],
     },
     {
       title: "Database",
       icon: <Database size={24} />,
       skills: ["MongoDB", "PostgreSQL", "MySQL"],
     },
-    
+    {
+      title: "DevOps & Tools",
+      icon: <Terminal size={24} />,
+      skills: ["Git", "Docker", "AWS", "CI/CD", "Jenkins","SonarQube"],
+    },
     {
       title: "Other Skills",
       icon: <Share2 size={24} />,
