@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     title: "EHR System",
     description:
-      "A productivity app with AI-powered task prioritization and smart reminders. Built with React and Node.js.",
+      "A patient management system for the Surgical Oncology Unit, developed as a third-year group software project with roles for Admin, Doctors, and MDT members.",
     image: "/images/EHR.png",
     tags: ["React", "Node.js", "MySQL", "Express.js"],
     githubUrl: "https://github.com/raveeshavishwajith/TechStrive_Taprobana",
@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: "Taprobana",
     description:
-      "A productivity app with AI-powered task prioritization and smart reminders. Built with React and Node.js.",
+      "A tourism platform developed for the Rootcode Tech Triathlon competition, selected as a top 10 finalist. Built to enhance tourism experiences in Sri Lanka.",
     image:
       "/images/taprobana.png",
     tags: ["Typescript", "Node.js", "MongoDB", "Machine Learning", "Python"],
@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     title: "Madhack 3.0 Job Mobile App",
     description:
-      "Interactive weather dashboard with real-time data visualization, location-based forecasts, and severe weather alerts.",
+      "A mobile application developed for the Madhack 3.0 competition organized by UCSC, selected as one of the final 8 groups.",
     image:
       "/images/job.png",
     tags: ["Flutter"],
@@ -38,7 +38,7 @@ const projects = [
     id: 4,
     title: "Madhack 3.0 Volunify Mobile App",
     description:
-      "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
+      "A volunteering management mobile app developed for the Madhack 3.0 final round at Virtusa Auditorium.",
     image:
       "/images/volunify.png",
     tags: ["Flutter"],
@@ -49,7 +49,7 @@ const projects = [
     id: 5,
     title: "Nigehelva AI Content Generator",
     description:
-      "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
+      "An AI-powered content generator built with Next.js, featuring SEO content creation, YouTube tag generation, and more",
     image:
      "/images/nighelva.jpg",
     tags: [
@@ -66,7 +66,7 @@ const projects = [
     id: 6,
     title: "Text Emotion Classifier",
     description:
-      "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
+      "A Python-based text emotion classifier with a React frontend and Flask API, leveraging NLP for sentiment analysis.",
     image:
       "/images/emoclassification.png",
     tags: ["NLP", "Streamlit", "Pandas", "Python", "Pickle"],
@@ -78,7 +78,7 @@ const projects = [
     id: 7,
     title: "Movie Recommender",
     description:
-      "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
+      "A movie recommendation system with a Streamlit-based UI for an interactive user experience.",
     image:
      "/images/movie_recommender.png",
     tags: ["Python", "Streamlit"],
@@ -118,7 +118,7 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110"
                 />
                 {hoveredProject === project.id && (
-                  <div className="absolute inset-0  bg-black bg-opacity-25 flex items-center justify-center space-x-4 transition-opacity duration-300">
+                  <div className="absolute inset-0  bg-black/85 bg-opacity-75  flex items-center justify-center space-x-4 transition-opacity duration-300">
                     {/* <a
                       // href={project.liveUrl}
                       target="_blank"

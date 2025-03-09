@@ -111,7 +111,7 @@ export default function Contact() {
                 </h3>
                 <div className="flex flex-row space-x-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/NigeeHettige"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-300"
@@ -130,7 +130,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/nigee-hettige/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full transition-colors duration-300"

@@ -73,7 +73,7 @@ export default function NavBar({ activeSession }: NavbarProps) {
         
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Image src={Logo} alt="logo_image" id="home" />
+          <Image src={Logo} alt="logo_image" id="home"  />
 
           <nav className="space-x-8 hidden md:flex">
             {tabs.map((link, index) => (

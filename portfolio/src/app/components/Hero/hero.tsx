@@ -38,8 +38,8 @@ export default function Hero() {
               human experience.
             </p>
             <div className="flex flex-row space-x-4 mb-6">
-              <a href="" target="blank" className="rounded-full p-3 bg-github text-background transition-colors duration-300 hover:bg-gray-700"> <Github size={25}/></a>
-              <a href="" target="blank" className="rounded-full p-3 bg-linkedin text-background transition-colors duration-300 hover:bg-blue-500"> <Linkedin size={25}/></a>
+              <a href="https://github.com/NigeeHettige" target="blank" className="rounded-full p-3 bg-github text-background transition-colors duration-300 hover:bg-gray-700"> <Github size={25}/></a>
+              <a href="https://www.linkedin.com/in/nigee-hettige/" target="blank" className="rounded-full p-3 bg-linkedin text-background transition-colors duration-300 hover:bg-blue-500"> <Linkedin size={25}/></a>
             </div>
             <button className="flex group items-center hover:text-indigo-700 text-header transition-colors duration-300 mb-6 cursor-pointer">
                
