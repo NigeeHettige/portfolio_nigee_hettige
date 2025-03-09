@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import { sendContactForm } from "@/lib/api";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,7 +12,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -18,26 +20,34 @@ export default function Contact() {
       [name]: value,
     }));
   };
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage(
-        "Thank you for your message! I will get back to you soon.",
-      );
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-      // Clear success message after 5 seconds
+    setIsSubmitting(true); // Indicate form submission started
+  
+    try {
+      const response = await sendContactForm(formData); // Await API response
+  
+      setSubmitMessage(response.message || "Thank you for your message! I will get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+  
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitMessage("Something went wrong. Please try again.");
+    } finally {
       setTimeout(() => {
+        setIsSubmitting(false);
+        
+      }, 1500);
+      setTimeout(() => {
+        
         setSubmitMessage("");
       }, 5000);
-    }, 1500);
+    }
   };
+  
+
+ 
   return (
     <>
       <section id="contact" className="w-full min-h-screen py-20">
@@ -171,7 +181,6 @@ export default function Contact() {
                     className="block text-gray-700 font-medium mb-2"
                   >
                     Your Email
-
                   </label>
                   <input
                     type="email"
@@ -192,7 +201,6 @@ export default function Contact() {
                     Your Message
                   </label>
                   <textarea
-                    
                     id="message"
                     name="message"
                     value={formData.message}
@@ -206,7 +214,11 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`flex items-center justify-center w-full py-3 px-6 rounded-lg text-white font-medium transition-colors duration-300 ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-indigo-600 hover:bg-indigo-700"}`}
+                  className={`flex items-center justify-center w-full py-3 px-6 rounded-lg text-white font-medium transition-colors duration-300 ${
+                    isSubmitting
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-indigo-600 hover:bg-indigo-700"
+                  }`}
                 >
                   {isSubmitting ? (
                     <svg

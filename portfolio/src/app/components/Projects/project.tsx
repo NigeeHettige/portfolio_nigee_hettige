@@ -1,14 +1,16 @@
+
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import EHR from "../../../../public/images/EHR.png";
+import { useEffect } from "react";
 const projects = [
   {
     id: 1,
     title: "EHR System",
     description:
       "A productivity app with AI-powered task prioritization and smart reminders. Built with React and Node.js.",
-    image:
-      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    tags: ["React", "Node.js", "MySQL","Express.js"],
+    image: "/images/EHR.png",
+    tags: ["React", "Node.js", "MySQL", "Express.js"],
     githubUrl: "https://github.com/raveeshavishwajith/TechStrive_Taprobana",
   },
   {
@@ -17,28 +19,28 @@ const projects = [
     description:
       "A productivity app with AI-powered task prioritization and smart reminders. Built with React and Node.js.",
     image:
-      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "/images/taprobana.png",
     tags: ["Typescript", "Node.js", "MongoDB", "Machine Learning", "Python"],
     githubUrl: "https://github.com/raveeshavishwajith/TechStrive_Taprobana",
   },
   {
     id: 3,
-    title: "Madhack 3.0 Job App",
+    title: "Madhack 3.0 Job Mobile App",
     description:
       "Interactive weather dashboard with real-time data visualization, location-based forecasts, and severe weather alerts.",
     image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "/images/job.png",
     tags: ["Flutter"],
 
     githubUrl: "https://github.com/raveeshavishwajith/madhack_job_app",
   },
   {
     id: 4,
-    title: "Madhack 3.0 Volunify App",
+    title: "Madhack 3.0 Volunify Mobile App",
     description:
       "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "/images/volunify.png",
     tags: ["Flutter"],
 
     githubUrl: "https://github.com/raveeshavishwajith/madhack_3.0",
@@ -49,8 +51,14 @@ const projects = [
     description:
       "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    tags: ["Next.js","PostgreSQL","Typescript","Clerk Authentication","Drizzle studio"],
+     "/images/nighelva.jpg",
+    tags: [
+      "Next.js",
+      "PostgreSQL",
+      "Typescript",
+      "Clerk Authentication",
+      "Drizzle studio",
+    ],
 
     githubUrl: "https://github.com/NigeeHettige/Nighelva",
   },
@@ -60,7 +68,7 @@ const projects = [
     description:
       "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "/images/emoclassification.png",
     tags: ["NLP", "Streamlit", "Pandas", "Python", "Pickle"],
 
     githubUrl:
@@ -72,15 +80,14 @@ const projects = [
     description:
       "Full-featured online store with product catalog, shopping cart, user authentication, and payment processing.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    tags: [
-      "Python","Streamlit"
-    ],
+     "/images/movie_recommender.png",
+    tags: ["Python", "Streamlit"],
 
     githubUrl:
       "https://github.com/NigeeHettige/DataScienceProjects/tree/main/MovieRecommenderSystem",
   },
 ];
+
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   return (
